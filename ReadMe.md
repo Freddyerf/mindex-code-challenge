@@ -85,3 +85,19 @@ Compensation from the persistence layer.
 
 ## Delivery
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
+
+## Implementation
+### Task 1
+For task 1, I created a new Entity called ReportingStructure with an `int` property for Number of reports and an `Employee` property for the actual employee.
+Moreover, I implemented the service layer of the Repository-Service pattern. Since the reporting structure should not persist I didn't implement the Repository layer.
+
+### Task 2
+For task 2, I created a new Entity called compensation with the properties: `Guid` Id for the unique identifier of the compensation, `Employee` for the employe the compensation is for, `double` salary, and `DateTime` EffectiveDate.
+Since the compensation data should persist, I added a DbSet to the context and implemented the Repository and Service layer.
+
+### Testing
+For testing purposes, I added a mock compensation in the Seed method.
+Implemented tests for the:
+- GET method of the Compensation Controller
+- POST method of the Compensation Controller
+- GET method of the Reporting Structure Controller
